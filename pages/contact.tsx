@@ -77,10 +77,10 @@ export default function Contact() {
                <p className={styles.description}>
                   <span className={styles.bold}>E-posta:</span>{" "}
                   <a
-                     href="mailto:morkoc_furkan@hotmail.com
+                     href="mailto:info@korteks.dev
                      "
                   >
-                     morkoc_furkan@hotmail.com
+                     info@korteks.dev
                   </a>
                </p>
             </div>
@@ -107,8 +107,8 @@ export default function Contact() {
                   <Image
                      src="/3fs_logo.png"
                      alt="Vercel Logo"
-                     width={52}
-                     height={52}
+                     width={40}
+                     height={40}
                   />
                </span>
             </a>

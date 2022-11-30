@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { useState, useEffect } from "react";
 
 const Section = (props: any) => {
    return (
@@ -10,8 +11,6 @@ const Section = (props: any) => {
                className={styles.img}
                src={props.img}
                alt="KORTEKS Asset"
-               width={650}
-               height={400}
                style={{
                   objectFit: "cover",
                }}
@@ -26,8 +25,6 @@ const Section = (props: any) => {
                className={styles.img}
                src={props.img}
                alt="KORTEKS Asset"
-               width={650}
-               height={400}
                style={{
                   objectFit: "cover",
                }}
@@ -37,7 +34,39 @@ const Section = (props: any) => {
    );
 };
 
+function useWindowSize() {
+   // Initialize state with undefined width/height so server and client renders match
+   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+   const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+   });
+
+   useEffect(() => {
+      // only execute all the code below in client side
+      // Handler to call on window resize
+      function handleResize() {
+         // Set window width/height to state
+         setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+         });
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+   }, []); // Empty array ensures that effect is only run on mount
+   return windowSize;
+}
+
 export default function Home() {
+   const size = useWindowSize();
    return (
       <div className={styles.container}>
          <Head>
@@ -85,7 +114,7 @@ export default function Home() {
                   <button
                      onClick={() => {
                         window.scroll({
-                           top: 900,
+                           top: size.height + 10,
                            left: 0,
                            behavior: "smooth",
                         });
@@ -108,7 +137,7 @@ export default function Home() {
                      ameliyat öncesi tüm özellikleri görebilirler.
                      "
                   img="https://medcitynews.com/uploads/2019/09/GettyImages-1015934084-600x337.jpg"
-                  width={1000}
+                  width={"30vw"}
                />
                <Section
                   title="Sanal Gerçeklik"
@@ -125,8 +154,8 @@ export default function Home() {
                      durumları önceden görebilirler.
                      "
                   img="https://i.guim.co.uk/img/media/6bc84a95a5284426a64e2f36c080adb92310b9cb/158_72_3423_2054/master/3423.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=8e76dceba0d8a530205e182ee6647af4"
-                  reverse
-                  width={750}
+                  reverse={size.width > 1000 ? true : false}
+                  width={"30vw"}
                />
                <Section
                   title="Yapay Zeka"
@@ -141,7 +170,7 @@ export default function Home() {
                      kullanılır.
                      "
                   img="https://i0.wp.com/sciencemediahub.eu/wp-content/uploads/2021/11/Artificial-intelligence-in-smart-healthcare-hospital-technology-concept.-Doctor-point-pen-to-AI-biomedical-screen-machine-learning-detect-brain-cancer-cell.jpg?fit=925%2C694&ssl=1"
-                  width={2300}
+                  width={"30vw"}
                />
             </div>
          </main>
@@ -167,8 +196,8 @@ export default function Home() {
                   <Image
                      src="/3fs_logo.png"
                      alt="3fs Logo"
-                     width={52}
-                     height={52}
+                     width={40}
+                     height={40}
                   />
                </span>
             </a>

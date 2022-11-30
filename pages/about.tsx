@@ -72,8 +72,8 @@ export default function About() {
                   <Image
                      src="/3fs_logo.png"
                      alt="Vercel Logo"
-                     width={52}
-                     height={52}
+                     width={40}
+                     height={40}
                   />
                </span>
             </a>
