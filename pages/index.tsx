@@ -38,8 +38,8 @@ function useWindowSize() {
    // Initialize state with undefined width/height so server and client renders match
    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
    const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
+      width: 0,
+      height: 0,
    });
 
    useEffect(() => {
@@ -48,7 +48,9 @@ function useWindowSize() {
       function handleResize() {
          // Set window width/height to state
          setWindowSize({
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             width: window.innerWidth,
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             height: window.innerHeight,
          });
       }
