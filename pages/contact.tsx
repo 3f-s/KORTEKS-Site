@@ -1,10 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
-   const { locale, locales, asPath } = useRouter();
+   const [locale, setLocale] = useState("en");
+   useEffect(() => {
+      setLocale(navigator.language.split(/[-_]/)[0]);
+   }, []);
    return (
       <div className={styles.container}>
          <Head>
@@ -41,14 +45,14 @@ export default function Contact() {
                         ? "Ana Sayfa"
                         : "Accueil"}
                   </a>
-                  <a href={"/" + locale + "/about"}>
+                  <a href={"/about"}>
                      {locale === "en"
                         ? "About"
                         : locale === "tr"
                         ? "Hakkımızda"
                         : "À propos"}
                   </a>
-                  <a href={"/" + locale + "/contact"}>
+                  <a href={"/contact"}>
                      {locale === "en"
                         ? "Contact"
                         : locale === "tr"

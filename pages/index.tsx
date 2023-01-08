@@ -164,11 +164,12 @@ function useWindowSize() {
 }
 
 export default function Home() {
-   const { locale, locales, asPath } = useRouter();
    const size = useWindowSize();
+   const [locale, setLocale] = useState("en");
    useEffect(() => {
-      console.log(locale);
+      setLocale(navigator.language.split(/[-_]/)[0]);
    }, []);
+
    return (
       <div className={styles.container}>
          <Head>
@@ -205,14 +206,14 @@ export default function Home() {
                         ? "Ana Sayfa"
                         : "Accueil"}
                   </a>
-                  <a href={"/" + locale + "/about"}>
+                  <a href={"/about"}>
                      {locale === "en"
                         ? "About"
                         : locale === "tr"
                         ? "Hakkımızda"
                         : "À propos"}
                   </a>
-                  <a href={"/" + locale + "/contact"}>
+                  <a href={"/contact"}>
                      {locale === "en"
                         ? "Contact"
                         : locale === "tr"
