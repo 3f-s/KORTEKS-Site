@@ -119,28 +119,22 @@ const sections = [
       },
       detail: {
          en: `
-         One of the diseases that cause the most deaths is malignant tumors, that is, cancer. In 2018, 18.1 million people were diagnosed with cancer and 9.6 million people died because of this. According to the International Agency for Research on Cancer, 2.9% of cancer cases in our country in 2018 are cancers related to the brain and central nervous system. Studies show that 5 out of every 100,000 people develop a brain tumor. Early and accurate diagnosis is very important for tumor treatment. While the tumor segmentation process from the MR image, which is mostly done manually by the doctors, takes weeks, this time is reduced to seconds using artificial intelligence, thanks to the system built with the deep learning network developed entirely by ourselves. CORTEX is not just a tumor segmentation system. Thanks to the developed desktop application, doctors can log in with their accounts, review and edit patient records or create new patient records. MR images loaded with the created records can be examined in detail in the same application with our embedded MR imaging system, so that some parts that cannot be noticed by the human eye are shown to the doctor with the help of computer systems. In this way, human-induced errors are largely avoided during tumor segmentation and surgical planning. After the MR images of the patients are analyzed by the application and artificial intelligence system, they are transferred to the virtual reality surgery simulation that we have created where the patient's brain's 3D modeling is made, and in the same way, the entire cranial surgery is simulated in virtual reality before the actual surgery. This artificial intelligence system makes surgery planning together with tumor segmentation and classification. The planned surgery is shown in the simulation. Thus, surgeons can practice with the exact modeling of the patient's brain before surgery. All these systems are combined in a single application and are easy to use, thus minimizing human-induced errors in very risky surgeries such as cranial operations.
+         Malignant tumors, or cancer, is one of the leading causes of death. In 2018, 18.1 million people were diagnosed with cancer and 9.6 million people died from it. According to the International Agency for Research on Cancer, 2.9% of cancer cases in 2018 in our country were brain and central nervous system related. Studies show that 5 out of every 100,000 people develop a brain tumor. Early and accurate diagnosis is vital for effective treatment. Our deep learning network has developed an artificial intelligence system called CORTEX that can segment tumors from MR images in seconds, a process that normally takes doctors weeks to do manually. CORTEX also includes a desktop application where doctors can log in, review and edit patient records or create new ones, and examine MR images in detail with our embedded MR imaging system, allowing for more accurate tumor segmentation and surgical planning. After analyzing the MR images, the artificial intelligence system transfers them to a virtual reality surgery simulation where the patient's brain is 3D modeled and the entire cranial surgery is simulated before the actual surgery. This system helps to minimize human error in risky surgeries by combining all these features in a single, easy-to-use application.
          `,
          tr: `
-         En çok ölüme neden olan hastalıklardan biri de kötü huylu tümörler yani kanserdir. 2018 yılında 18,1 milyon kişiye kanser teşhisi kondu ve bu nedenle 9,6 milyon kişi hayatını kaybetti. Uluslararası Kanser Araştırma Ajansı'na göre 2018 yılında ülkemizdeki kanser vakalarının %2,9'unu beyin ve merkezi sinir sistemi ile ilgili kanserler oluşturmaktadır. Araştırmalar, her 100.000 kişiden 5'inde beyin tümörü geliştiğini gösteriyor. Tümör tedavisi için erken ve doğru teşhis çok önemlidir. Çoğunlukla doktorların manuel olarak yaptığı MR görüntüsünden tümör bölütleme işlemi haftalar sürerken, tamamen kendi geliştirdiğimiz derin öğrenme ağı ile kurguladığımız sistem sayesinde bu süre yapay zeka kullanılarak saniyelere indiriliyor. KORTEKS sadece bir tümör segmentasyon sistemi değildir. Geliştirilen masaüstü uygulaması sayesinde doktorlar hesapları ile giriş yapabilir, hasta kayıtlarını inceleyip düzenleyebilir veya yeni hasta kayıtları oluşturabilir. Oluşturulan kayıtlarla yüklenen MR görüntüleri gömülü MR görüntüleme sistemimiz ile aynı uygulama içerisinde detaylı olarak incelenebilmekte ve böylece insan gözünün göremediği bazı kısımlar bilgisayar sistemleri yardımıyla doktora gösterilebilmektedir. Bu şekilde, tümör segmentasyonu ve cerrahi planlama sırasında insan kaynaklı hatalardan büyük ölçüde kaçınılır. Hastaların MR görüntüleri uygulama ve yapay zeka sistemi tarafından analiz edildikten sonra hastanın beyninin 3D modellemesinin yapıldığı kendi oluşturduğumuz sanal gerçeklik ameliyat simülasyonuna aktarılır ve aynı şekilde tüm kranial cerrahi de yapılır. gerçek ameliyattan önce sanal gerçeklikte simüle edildi. Bu yapay zeka sistemi, tümör segmentasyonu ve sınıflandırması ile cerrahi planlamayı birlikte yapıyor. Planlanan ameliyat simülasyonda gösterilir. Böylece cerrahlar, ameliyattan önce hastanın beyninin tam olarak modellenmesi ile pratik yapabilirler. Tüm bu sistemlerin tek bir uygulamada birleştirilmesi ve kolay kullanımı sayesinde kraniyal operasyonlar gibi çok riskli ameliyatlarda insan kaynaklı hataları en aza indirmektedir.
+         Kötü huylu tümörler veya kanser, önde gelen ölüm nedenlerinden biridir. 2018 yılında 18,1 milyon kişiye kanser teşhisi kondu ve 9,6 milyon kişi bu nedenle hayatını kaybetti. Uluslararası Kanser Araştırmaları Ajansı'na göre ülkemizde 2018 yılında kanser vakalarının %2,9'u beyin ve merkezi sinir sistemi ile ilgiliydi. Araştırmalar, her 100.000 kişiden 5'inde beyin tümörü geliştiğini gösteriyor. Etkili tedavi için erken ve doğru tanı hayati önem taşır. Derin öğrenme ağımız, normalde doktorların manuel olarak haftalarca süren bir işlem olan MR görüntülerinden tümörleri saniyeler içinde segmentlere ayırabilen KORTEKS adlı bir yapay zeka sistemi geliştirdi. KORTEKS ayrıca, doktorların oturum açabileceği, hasta kayıtlarını inceleyip düzenleyebileceği veya yenilerini oluşturabileceği ve yerleşik MR görüntüleme sistemimizle MR görüntülerini ayrıntılı olarak inceleyebileceği bir masaüstü uygulaması içerir, bu da daha doğru tümör segmentasyonu ve cerrahi planlama sağlar. MR görüntülerini analiz ettikten sonra, yapay zeka sistemi onları hastanın beyninin 3D modellendiği ve gerçek ameliyattan önce tüm kraniyal cerrahinin simüle edildiği bir sanal gerçeklik ameliyat simülasyonuna aktarır. Bu sistem, tüm bu özellikleri kullanımı kolay tek bir uygulamada birleştirerek riskli ameliyatlarda insan hatasını en aza indirmeye yardımcı olur.
          `,
-         fr: `L'une des maladies qui causent le plus de décès est les tumeurs malignes, c'est-à-dire le cancer. En 2018, 18,1 millions de personnes ont reçu un diagnostic de cancer et 9,6 millions de personnes en sont décédées. Selon le Centre international de recherche sur le cancer, 2,9 % des cas de cancer dans notre pays en 2018 sont des cancers liés au cerveau et au système nerveux central. Des études montrent que 5 personnes sur 100 000 développent une tumeur au cerveau. Un diagnostic précoce et précis est très important pour le traitement des tumeurs. Alors que le processus de segmentation tumorale à partir de l'image IRM, qui est principalement effectué manuellement par les médecins, prend des semaines, ce temps est réduit à quelques secondes grâce à l'intelligence artificielle, grâce au système construit avec le réseau d'apprentissage en profondeur entièrement développé par nous-mêmes. CORTEX n'est pas seulement un système de segmentation tumorale. Grâce à l'application de bureau développée, les médecins peuvent se connecter avec leurs comptes, consulter et modifier les dossiers des patients ou créer de nouveaux dossiers de patients. Les images RM chargées avec les enregistrements créés peuvent être examinées en détail dans la même application avec notre système d'imagerie RM intégré, de sorte que certaines parties qui ne peuvent pas être remarquées par l'œil humain sont montrées au médecin à l'aide de systèmes informatiques. De cette façon, les erreurs induites par l'homme sont largement évitées lors de la segmentation tumorale et de la planification chirurgicale. Une fois les images IRM des patients analysées par l'application et le système d'intelligence artificielle, elles sont transférées vers la simulation de chirurgie en réalité virtuelle que nous avons créée où la modélisation 3D du cerveau du patient est réalisée, et de la même manière, toute la chirurgie crânienne est simulé en réalité virtuelle avant la chirurgie proprement dite. Ce système d'intelligence artificielle permet la planification de la chirurgie ainsi que la segmentation et la classification des tumeurs. La chirurgie prévue est montrée dans la simulation. Ainsi, les chirurgiens peuvent s'exercer avec la modélisation exacte du cerveau du patient avant la chirurgie. Tous ces systèmes sont combinés en une seule application et sont faciles à utiliser, minimisant ainsi les erreurs induites par l'homme dans les chirurgies très risquées telles que les opérations crâniennes.`,
+         fr: `Les tumeurs malignes, ou cancers, sont l'une des principales causes de décès. En 2018, 18,1 millions de personnes ont reçu un diagnostic de cancer et 9,6 millions de personnes en sont décédées. Selon le Centre international de recherche sur le cancer, 2,9 % des cas de cancer en 2018 dans notre pays étaient liés au cerveau et au système nerveux central. Des études montrent que 5 personnes sur 100 000 développent une tumeur au cerveau. Un diagnostic précoce et précis est essentiel pour un traitement efficace. Notre réseau d'apprentissage en profondeur a développé un système d'intelligence artificielle appelé CORTEX qui peut segmenter les tumeurs à partir d'images IRM en quelques secondes, un processus qui prend normalement des semaines aux médecins à faire manuellement. CORTEX comprend également une application de bureau où les médecins peuvent se connecter, consulter et modifier les dossiers des patients ou en créer de nouveaux, et examiner les images IRM en détail avec notre système d'imagerie IRM intégré, permettant une segmentation tumorale et une planification chirurgicale plus précises. Après avoir analysé les images IRM, le système d'intelligence artificielle les transfère à une simulation de chirurgie en réalité virtuelle où le cerveau du patient est modélisé en 3D et toute la chirurgie crânienne est simulée avant la chirurgie proprement dite. Ce système aide à minimiser les erreurs humaines dans les chirurgies à risque en combinant toutes ces fonctionnalités dans une seule application facile à utiliser.`,
       },
    },
 ];
 
 function useWindowSize() {
-   // Initialize state with undefined width/height so server and client renders match
-   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
    const [windowSize, setWindowSize] = useState({
       width: 0,
       height: 0,
    });
-
    useEffect(() => {
-      // only execute all the code below in client side
-      // Handler to call on window resize
-
       function handleResize() {
          // Set window width/height to state
          setWindowSize({
@@ -169,6 +163,7 @@ export default function Home() {
    useEffect(() => {
       setLocale(navigator.language.split(/[-_]/)[0]);
    }, []);
+   const [isSelectBoxOpen, setIsSelectBoxOpen] = useState(false);
 
    return (
       <div className={styles.container}>
@@ -220,6 +215,46 @@ export default function Home() {
                         ? "İletişim"
                         : "Contact"}
                   </a>
+                  <div
+                     className={styles.selectLanguage}
+                     onClick={() => setIsSelectBoxOpen(!isSelectBoxOpen)}
+                  >
+                     <span>
+                        {locale === "en"
+                           ? "🇬🇧 English"
+                           : locale === "tr"
+                           ? "🇹🇷 Türkçe"
+                           : "🇫🇷 Français"}
+                     </span>
+                     {isSelectBoxOpen && (
+                        <div className={styles.languageOptions}>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("en");
+                              }}
+                           >
+                              🇬🇧 English
+                           </span>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("tr");
+                              }}
+                           >
+                              🇹🇷 Türkçe
+                           </span>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("fr");
+                              }}
+                           >
+                              🇫🇷 Français
+                           </span>
+                        </div>
+                     )}
+                  </div>
                </div>
                {/* divider line */}
             </div>

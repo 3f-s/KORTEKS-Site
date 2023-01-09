@@ -27,7 +27,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 17rem;
+   width: 22rem;
 }
 
 .footer {
@@ -293,4 +293,43 @@
       color: #fff;
       border: 1px solid #0070f3;
    }
+}
+
+.selectLanguage {
+   background-color: #222;
+   padding: 2%;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   flex-direction: column;
+   -webkit-touch-callout: none; /* iOS Safari */
+   user-select: none;
+}
+
+.languageOptions {
+   position: absolute;
+   display: flex;
+   top: 11%;
+   background-color: #222;
+   padding: 0.5%;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   /*disable text selection*/
+   width: 7%;
+   -webkit-touch-callout: none; /* iOS Safari */
+   user-select: none;
+}
+
+.languageOption {
+   margin-top: 7px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.languageOption:hover {
+   color: rgb(166, 166, 166);
 }

@@ -22,6 +22,7 @@ export default function About() {
    useEffect(() => {
       setLocale(navigator.language.split(/[-_]/)[0]);
    }, []);
+   const [isSelectBoxOpen, setIsSelectBoxOpen] = useState(false);
    return (
       <div className={styles.container}>
          <Head>
@@ -72,6 +73,46 @@ export default function About() {
                         ? "İletişim"
                         : "Contact"}
                   </a>
+                  <div
+                     className={styles.selectLanguage}
+                     onClick={() => setIsSelectBoxOpen(!isSelectBoxOpen)}
+                  >
+                     <span>
+                        {locale === "en"
+                           ? "🇬🇧 English"
+                           : locale === "tr"
+                           ? "🇹🇷 Türkçe"
+                           : "🇫🇷 Français"}
+                     </span>
+                     {isSelectBoxOpen && (
+                        <div className={styles.languageOptions}>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("en");
+                              }}
+                           >
+                              🇬🇧 English
+                           </span>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("tr");
+                              }}
+                           >
+                              🇹🇷 Türkçe
+                           </span>
+                           <span
+                              className={styles.languageOption}
+                              onClick={() => {
+                                 setLocale("fr");
+                              }}
+                           >
+                              🇫🇷 Français
+                           </span>
+                        </div>
+                     )}
+                  </div>
                </div>
             </div>
             <div className={styles.divider}></div>
