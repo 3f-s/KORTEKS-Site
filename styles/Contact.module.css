@@ -263,12 +263,10 @@
    .navBar a {
       color: #fff;
    }
-   .button {
-      border: 1px solid #0070f3;
-   }
 }
 
 @media (prefers-color-scheme: light) {
+   /*
    .card,
    .footer {
       border-color: #222;
@@ -282,19 +280,23 @@
    .logo_3fs {
       filter: grayscale(100%);
    }
-   .inputMail,
-   .inputName,
-   .inputTitle,
-   .inputDescripition {
-      background-color: rgb(222, 222, 222);
+
+   */
+
+   .card,
+   .footer {
+      border-color: #222;
    }
-   .button {
-      background-color: #0070f3;
+   .code {
+      background: #111;
+   }
+   .logo_3fs {
+      filter: brightness(0) invert(1);
+   }
+   .navBar a {
       color: #fff;
-      border: 1px solid #0070f3;
    }
 }
-
 .selectLanguage {
    background-color: #222;
    padding: 2%;

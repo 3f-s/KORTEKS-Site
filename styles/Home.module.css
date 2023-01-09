@@ -195,6 +195,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+   /*
    .card,
    .footer {
       border-color: #222;
@@ -207,6 +208,22 @@
    }
    .logo_3fs {
       filter: grayscale(100%);
+   }
+
+   */
+
+   .card,
+   .footer {
+      border-color: #222;
+   }
+   .code {
+      background: #111;
+   }
+   .logo_3fs {
+      filter: brightness(0) invert(1);
+   }
+   .navBar a {
+      color: #fff;
    }
 }
 
